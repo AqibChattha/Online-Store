@@ -113,7 +113,7 @@ namespace Online_Store.UI
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(lbStock.Text) > 0)
+            if (Convert.ToInt32(lbStock.Tag.ToString()) > 0)
             {
                 Purchase purchase = new Purchase(productId, this, lbModelBrand.Tag.ToString(), rtbDescription.Tag.ToString(), lbStock.Tag.ToString(), lbPrice.Tag.ToString(), pbProductImage.BackgroundImage);
                 this.Hide();
