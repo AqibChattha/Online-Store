@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Online_Store.UI;
+using System;
 using System.Windows.Forms;
 
 namespace Online_Store
@@ -16,7 +14,7 @@ namespace Online_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductInfo());
+            Application.Run(new MainForm());
         }
     }
 }
