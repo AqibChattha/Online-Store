@@ -143,11 +143,12 @@ namespace Online_Store.UI
 
         private void btnVerify_Click(object sender, EventArgs e)
         {
+            SqlDataReader reader = null;
             try
             {
                 var con = Config.Instance.Connection;
                 SqlCommand cmd = new SqlCommand("SELECT [id], [firstName], [lastName], [telephone], [address], [creditCardNum] FROM [dbo].[Customer] WHERE [telephone] = " + tbPhoneNo.Text + " AND [creditCardNum] = " + tbCreditCardNumber.Text + ";", con);
-                SqlDataReader reader = cmd.ExecuteReader();
+                reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     customerId = reader["id"].ToString();
@@ -168,6 +169,11 @@ namespace Online_Store.UI
             }
             catch (Exception)
             {
+                if (reader != null)
+                {
+                    reader.Close();
+                    reader.Dispose();
+                }
                 MessageBox.Show("The customer with given phone number and credit card information is not found.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
