@@ -51,6 +51,7 @@ namespace Online_Store.UI
                         , reader["price"].ToString());
                 }
                 reader.Close();
+                reader.Dispose();
             }
             catch (Exception)
             {
@@ -76,6 +77,7 @@ namespace Online_Store.UI
                         , reader["price"].ToString());
                 }
                 reader.Close();
+                reader.Dispose();
             }
             catch (Exception)
             {

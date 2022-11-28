@@ -50,6 +50,7 @@ namespace Online_Store.UI
                 lbPrice.Text = "Price = " + reader["price"].ToString();
                 lbPrice.Tag = reader["price"].ToString();
                 reader.Close();
+                reader.Dispose();
 
                 cmd = new SqlCommand("SELECT [image], [previewImage1], [previewImage2], [previewImage3] FROM [dbo].[ProductImages] WHERE [productId] = " + productId + ";", con);
                 reader = cmd.ExecuteReader();
@@ -82,6 +83,7 @@ namespace Online_Store.UI
                     LoadPreviewImage();
                 }
                 reader.Close();
+                reader.Dispose();
             }
             catch (Exception)
             {
@@ -111,9 +113,16 @@ namespace Online_Store.UI
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            Purchase purchase = new Purchase(productId, this, lbModelBrand.Tag.ToString(), rtbDescription.Tag.ToString(), lbStock.Tag.ToString(), lbPrice.Tag.ToString(), pbProductImage.BackgroundImage);
-            this.Hide();
-            purchase.ShowDialog();
+            if (Convert.ToInt32(lbStock.Text) > 0)
+            {
+                Purchase purchase = new Purchase(productId, this, lbModelBrand.Tag.ToString(), rtbDescription.Tag.ToString(), lbStock.Tag.ToString(), lbPrice.Tag.ToString(), pbProductImage.BackgroundImage);
+                this.Hide();
+                purchase.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Sorry, this product is out of stock.", "Out of Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void ProductInfo_FormClosing(object sender, FormClosingEventArgs e)

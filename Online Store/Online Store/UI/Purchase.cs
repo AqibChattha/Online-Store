@@ -164,6 +164,7 @@ namespace Online_Store.UI
                     MessageBox.Show("The customer with given phone number and credit card information is not found.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
+                reader.Dispose();
             }
             catch (Exception)
             {
