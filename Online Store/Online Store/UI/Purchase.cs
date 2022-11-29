@@ -3,7 +3,6 @@ using System.Data.SqlClient;
 using System;
 using System.Windows.Forms;
 using System.Drawing;
-using System.IO;
 
 namespace Online_Store.UI
 {
