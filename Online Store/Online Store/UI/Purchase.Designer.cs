@@ -393,7 +393,7 @@
             this.gbProductInfo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gbProductInfo.Controls.Add(this.tlpInfoColomns);
             this.gbProductInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbProductInfo.Location = new System.Drawing.Point(185, 9);
+            this.gbProductInfo.Location = new System.Drawing.Point(227, 9);
             this.gbProductInfo.Name = "gbProductInfo";
             this.gbProductInfo.Size = new System.Drawing.Size(603, 133);
             this.gbProductInfo.TabIndex = 3;
@@ -498,7 +498,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pbProductImage.BackColor = System.Drawing.Color.Gainsboro;
             this.pbProductImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbProductImage.Location = new System.Drawing.Point(12, 15);
+            this.pbProductImage.Location = new System.Drawing.Point(54, 15);
             this.pbProductImage.Name = "pbProductImage";
             this.pbProductImage.Size = new System.Drawing.Size(167, 124);
             this.pbProductImage.TabIndex = 2;
