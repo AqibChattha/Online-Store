@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfo));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.lbFocus = new System.Windows.Forms.Label();
@@ -329,10 +330,11 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(884, 611);
             this.Controls.Add(this.pnlMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 650);
             this.Name = "ProductInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SelectedProduct";
+            this.Text = "Product Preview";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductInfo_FormClosing);
             this.Load += new System.EventHandler(this.ProductInfo_Load);
             this.pnlMain.ResumeLayout(false);
