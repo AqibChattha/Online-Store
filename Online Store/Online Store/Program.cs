@@ -14,6 +14,7 @@ namespace Online_Store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // We start the application by displaying the mainform that has the products gallery for customers.
             Application.Run(new MainForm());
         }
     }

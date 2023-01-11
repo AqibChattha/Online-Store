@@ -45,9 +45,11 @@
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pbMainImage = new System.Windows.Forms.PictureBox();
+            this.btnAddProducts = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            this.pnlFooter.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMainImage)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +74,7 @@
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBody.Location = new System.Drawing.Point(0, 139);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(884, 451);
+            this.pnlBody.Size = new System.Drawing.Size(884, 428);
             this.pnlBody.TabIndex = 2;
             // 
             // label4
@@ -135,7 +137,7 @@
             this.dgvProducts.ShowCellToolTips = false;
             this.dgvProducts.ShowEditingIcon = false;
             this.dgvProducts.ShowRowErrors = false;
-            this.dgvProducts.Size = new System.Drawing.Size(860, 413);
+            this.dgvProducts.Size = new System.Drawing.Size(860, 390);
             this.dgvProducts.TabIndex = 1;
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
             // 
@@ -199,10 +201,11 @@
             // 
             // pnlFooter
             // 
+            this.pnlFooter.Controls.Add(this.btnAddProducts);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 590);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 567);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(884, 21);
+            this.pnlFooter.Size = new System.Drawing.Size(884, 44);
             this.pnlFooter.TabIndex = 1;
             // 
             // pnlHeader
@@ -225,6 +228,23 @@
             this.pbMainImage.TabIndex = 0;
             this.pbMainImage.TabStop = false;
             // 
+            // btnAddProducts
+            // 
+            this.btnAddProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAddProducts.FlatAppearance.BorderSize = 0;
+            this.btnAddProducts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnAddProducts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAddProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProducts.Location = new System.Drawing.Point(774, 6);
+            this.btnAddProducts.Name = "btnAddProducts";
+            this.btnAddProducts.Size = new System.Drawing.Size(98, 31);
+            this.btnAddProducts.TabIndex = 1;
+            this.btnAddProducts.Text = "Add Products";
+            this.btnAddProducts.UseVisualStyleBackColor = false;
+            this.btnAddProducts.Click += new System.EventHandler(this.btnAddProducts_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +262,7 @@
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMainImage)).EndInit();
             this.ResumeLayout(false);
@@ -266,6 +287,7 @@
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbMainImage;
+        private System.Windows.Forms.Button btnAddProducts;
     }
 }
 
